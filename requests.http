@@ -3,8 +3,30 @@ POST http://localhost:3000/api/products HTTP/1.1
 content-Type: application/json
 
 {
+    "name": "Toalla",
+    "price": 220,
+    "stock": 2540,
+    "description": "Toalla que seca"
+}
+
+
+### 
+GET http://localhost:3000/api/products HTTP/1.1
+
+### 
+GET http://localhost:3000/api/products/6335c045a391dbfe599f2136 HTTP/1.1
+
+### 
+PUT http://localhost:3000/api/products/6335c045a391dbfe599f2136 HTTP/1.1
+content-Type: application/json
+
+{
     "name": "Coca-Cola",
     "price": 20,
     "stock": 250,
-    "description": "Coca-Cola que se bebe"
+    "description": "Coca-Cola que no se bebe"
 }
+
+### 
+DELETE http://localhost:3000/api/products/6335c181f6dd3e0fa38a5a78 HTTP/1.1
+
