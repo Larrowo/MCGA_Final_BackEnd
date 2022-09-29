@@ -1,0 +1,27 @@
+{
+  "name": "primerparcial_mcga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Larrowo/PrimerParcial_MCGA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Larrowo/PrimerParcial_MCGA/issues"
+  },
+  "homepage": "https://github.com/Larrowo/PrimerParcial_MCGA#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
