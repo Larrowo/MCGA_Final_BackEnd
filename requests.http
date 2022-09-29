@@ -1,0 +1,10 @@
+###
+POST http://localhost:3000/api/products HTTP/1.1
+content-Type: application/json
+
+{
+    "name": "Coca-Cola",
+    "price": 20,
+    "stock": 250,
+    "description": "Coca-Cola que se bebe"
+}
