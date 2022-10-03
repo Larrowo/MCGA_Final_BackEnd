@@ -2,6 +2,8 @@
 
 Simple REST API application using MongoDB as a database.
 
+This application uses only javascript.
+
 
 ## Installation
 
@@ -19,7 +21,7 @@ Open a terminal, go to the project's root directory and run:
 
 
 
-### VSCode extensions
+## VSCode extensions
 
 Some extensions of Vs Code can be used to improve development and keep the code
 the same between developers. 
@@ -32,7 +34,9 @@ the same between developers.
 ## Important libraries used
 
 
-- [Express.js](https://expressjs.com/es/)
-- [Mongoose](https://mongoosejs.com/)
-- [Nodemon](https://nodemon.io/)
-- [Dotenv](https://www.npmjs.com/package/dotenv)
+- Build 
+  - [Express.js](https://expressjs.com/es/)
+  - [Mongoose](https://mongoosejs.com/)
+  - [Dotenv](https://www.npmjs.com/package/dotenv)
++ Used for development only
+  - [Nodemon](https://nodemon.io/)
