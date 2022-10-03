@@ -3,10 +3,10 @@ POST http://localhost:3000/api/products HTTP/1.1
 content-Type: application/json
 
 {
-    "name": "Toalla",
+    "name": "Pastillas",
     "price": 220,
     "stock": 2540,
-    "description": "Toalla que seca"
+    "description": "Pastilla que se traga"
 }
 
 
@@ -24,9 +24,9 @@ content-Type: application/json
     "name": "Coca-Cola",
     "price": 20,
     "stock": 250,
-    "description": "Coca-Cola que no se bebe"
+    "description": "Coca-Cola que se re toma"
 }
 
 ### 
-DELETE http://localhost:3000/api/products/6335c181f6dd3e0fa38a5a78 HTTP/1.1
+DELETE http://localhost:3000/api/products/6335e81af995e6d8b3ceee8c HTTP/1.1
 
