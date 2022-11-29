@@ -21,11 +21,11 @@ const usersSchema = mongoose.Schema({
     type: "number",
     required: true,
   },
-  email: {
+  nationality: {
     type: "string",
     required: true,
   },
-  nationality: {
+  email: {
     type: "string",
     required: true,
   },
