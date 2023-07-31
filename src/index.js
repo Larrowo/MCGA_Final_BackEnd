@@ -2,22 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const userRoutes = require("./routes/product");
-const cors = require("cors");
 const app = express();
+const cors = require("cors");
 
 app.use(
   cors({
     origin: "*",
   })
 );
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   next();
-// });
 
 const PORT = process.env.PORT || 4000;
 
