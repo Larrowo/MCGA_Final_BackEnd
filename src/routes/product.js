@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const userSchema = require("../models/user");
+const userSchema = require("../models/User");
 
 //create user
 router.post("/users", (req, res) => {
