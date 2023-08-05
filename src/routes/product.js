@@ -1,65 +1,20 @@
 const express = require("express");
 const router = express.Router();
-const employeeSchema = require("../models/employee");
+const employeesController = require("../controllers/employees")
 
-//create employee
-router.post("/employees", (req, res) => {
-  const employee = employeeSchema(req.body);
-  employee
-    .save(employee)
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
-});
+// Listens to the GET method
+router.get("/", employeesController.getEmployees)
 
-//get all employees
-router.get("/employees", (req, res) => {
-  employeeSchema
-    .find()
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
-});
+// Listens to the GET method with the ´id´ parameter
+router.get("/id/:id", employeesController.getEmployeesById)
 
-//get a specific employee
-router.get("/employees/:id", (req, res) => {
-  const { id } = req.params;
-  employeeSchema
-    .findById(id)
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
-});
+// Listens to the POST method
+router.get("/", employeesController.addEmployee)
 
-//update a employee
-router.put("/employees/:id", (req, res) => {
-  const { id } = req.params;
-  const { name, surname, age, birthDate, email, password, DNI, nationality } =
-    req.body;
-  employeeSchema
-    .updateOne(
-      { _id: id },
-      {
-        $set: {
-          name,
-          surname,
-          birthDate,
-          age,
-          email,
-          password,
-          DNI,
-          nationality,
-        },
-      }
-    )
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
-});
+// Listens to the DELETE method
+router.get("/:id", employeesController.deleteEmployeeById)
 
-//delete a employee
-router.delete("/employees/:id", (req, res) => {
-  const { id } = req.params;
-  employeeSchema
-    .deleteOne({ _id: id })
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
-});
+// Listens to the PUT method
+router.get("/:id", employeesController.updateEmployeeById)
 
 module.exports = router;
