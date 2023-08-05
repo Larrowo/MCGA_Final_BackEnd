@@ -32,7 +32,7 @@ const getEmployeesById = async (req, res) => {
     return res.status(200).json({
       data: response,
       error: false,
-      msg: `Found employee: ${response.name}`
+      msg: `Found employee: ${response.surname}, ${response.name}`
     })
   } catch (error) {
     return res.status(400).json({
@@ -68,13 +68,13 @@ const deleteEmployeeById = async (req, res) => {
     if (!response) {
       return res.status(404).json({
         error: true,
-        msg: 'No se encuentra el producto que desea eliminar'
+        msg: 'The employee cannot be found'
       })
     }
     return res.status(204).json({
       data: response,
       error: false,
-      msg: 'Employeeo eliminado'
+      msg: 'Employee deleted'
     })
   } catch (error) {
     return res.status(400).json({
@@ -91,13 +91,13 @@ const updateEmployeeById = async (req, res) => {
     if (!response) {
       return res.status(400).json({
         error: true,
-        msg: 'No se pudo actualizar el Employeeo'
+        msg: "Couldn't update employee"
       })
     }
     return res.status(200).json({
       data: response,
       error: false,
-      message: 'Employeeo actualizado'
+      message: 'Employee updated'
     })
   } catch (error) {
     return res.status(400).json({
