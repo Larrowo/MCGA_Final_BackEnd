@@ -9,12 +9,12 @@ router.get('/', employeesController.getEmployees)
 router.get('/id/:id', employeesController.getEmployeesById)
 
 // Listens to the POST method
-router.get('/', employeesController.addEmployee)
+router.post('/', employeesController.addEmployee)
 
 // Listens to the DELETE method
-router.get('/:id', employeesController.deleteEmployeeById)
+router.delete('/:id', employeesController.deleteEmployeeById)
 
 // Listens to the PUT method
-router.get('/:id', employeesController.updateEmployeeById)
+router.put('/:id', employeesController.updateEmployeeById)
 
 module.exports = router
