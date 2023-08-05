@@ -1,39 +1,39 @@
 const express = require("express");
 const router = express.Router();
-const userSchema = require("../models/User");
+const employeeSchema = require("../models/employee");
 
-//create user
-router.post("/users", (req, res) => {
-  const user = userSchema(req.body);
-  user
-    .save(user)
+//create employee
+router.post("/employees", (req, res) => {
+  const employee = employeeSchema(req.body);
+  employee
+    .save(employee)
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
-//get all users
-router.get("/users", (req, res) => {
-  userSchema
+//get all employees
+router.get("/employees", (req, res) => {
+  employeeSchema
     .find()
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
-//get a specific user
-router.get("/users/:id", (req, res) => {
+//get a specific employee
+router.get("/employees/:id", (req, res) => {
   const { id } = req.params;
-  userSchema
+  employeeSchema
     .findById(id)
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });
 
-//update a user
-router.put("/users/:id", (req, res) => {
+//update a employee
+router.put("/employees/:id", (req, res) => {
   const { id } = req.params;
   const { name, surname, age, birthDate, email, password, DNI, nationality } =
     req.body;
-  userSchema
+  employeeSchema
     .updateOne(
       { _id: id },
       {
@@ -53,10 +53,10 @@ router.put("/users/:id", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 
-//delete a user
-router.delete("/users/:id", (req, res) => {
+//delete a employee
+router.delete("/employees/:id", (req, res) => {
   const { id } = req.params;
-  userSchema
+  employeeSchema
     .deleteOne({ _id: id })
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
