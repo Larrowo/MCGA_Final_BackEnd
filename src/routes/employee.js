@@ -3,7 +3,7 @@ const router = express.Router()
 const employeesController = require('../controllers/employees')
 
 // Listens to the GET method
-router.get('/', employeesController.getEmployees)
+router.get('/employees', employeesController.getEmployees)
 
 // Listens to the GET method with the ´id´ parameter
 router.get('/id/:id', employeesController.getEmployeesById)

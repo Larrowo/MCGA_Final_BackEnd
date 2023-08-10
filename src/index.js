@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 require('dotenv').config()
 const employeeRoutes = require('./routes/employee')
+const authRoutes = require('./routes/auth')
 const app = express()
 const cors = require('cors')
 
@@ -13,9 +14,10 @@ app.use(
   })
 )
 
-// middleware
 app.use(express.json())
-app.use('/api', employeeRoutes)
+
+// middleware
+app.use('/api', employeeRoutes, authRoutes)
 
 // Ping route
 app.get('/', (req, res) => {
