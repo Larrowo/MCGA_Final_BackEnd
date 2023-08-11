@@ -9,7 +9,7 @@ router.get('/employees', employeesController.getEmployees)
 router.get('/id/:id', employeesController.getEmployeesById)
 
 // Listens to the POST method
-router.post('/', employeesController.addEmployee)
+router.post('/employees', employeesController.addEmployee)
 
 // Listens to the DELETE method
 router.delete('/:id', employeesController.deleteEmployeeById)
