@@ -13,6 +13,17 @@ Open a terminal, go to the project's root directory and run:
 More info:
 [npm install command](https://docs.npmjs.com/cli/v6/commands/npm-install)
 
+## .ENV Configuration
+
+Create a '.env' file in the root directory and paste:
+
+> `> MONGODB_URI = mongodb+srv://<username>:<password>@cluster0.s0wwsp5.mongodb.net/?retryWrites=true&w=majority`
+
+Enter your database user credentials (without the '<>') and specify the name of your database before the '?'.
+
+More info:
+[MongoDb URI Format](https://www.mongodb.com/docs/manual/reference/connection-string/)
+
 ## Run the application
 
 Open a terminal, go to the project's root directory and run:
