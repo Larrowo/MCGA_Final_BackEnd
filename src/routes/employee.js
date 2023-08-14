@@ -15,6 +15,6 @@ router.post('/employees', employeesController.addEmployee)
 router.delete('/:id', employeesController.deleteEmployeeById)
 
 // Listens to the PUT method
-router.put('/:id', employeesController.updateEmployeeById)
+router.put('/employee/:id', employeesController.updateEmployeeById)
 
 module.exports = router
