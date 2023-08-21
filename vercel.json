@@ -8,7 +8,7 @@
           ]
         },
         {
-          "source": "/https://mcga-final-back-end.vercel.app/(.*)",
+          "source": "https://mcga-final-back-end.vercel.app/(.*)",
           "headers": [
             { "key": "Access-Control-Allow-Origin", "value": "*" }
           ]
