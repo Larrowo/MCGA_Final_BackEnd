@@ -12,36 +12,24 @@ const login = async (req, res) => {
   }
   try {
     const user = await userSchema.findOne({ email })
-    if (!user) {
-      throw new Error('User not found!')
-    }
+    if (!user) throw new Error('User not found!')
     if (user.password !== password) {
       const err = new Error('Wrong credentials!')
       err.status = 401
       throw err
     }
 
-    const token = jwt.sign(
-      {
-        email,
-        userId: user._id
-      },
-      process.env.JWT_KEY,
-      {
-        expiresIn: '1d'
-      }
-    )
-
-    user.token = token
-    await user.save()
+    const token = jwt.sign({ email, userId: user._id }, process.env.JWT_KEY, { expiresIn: '15m' })
 
     return res.status(200).json({
       message: 'User Logged',
       data: {
-        name: user.name,
-        email: user.email,
-        _id: user._id,
-        token: user.token
+        token,
+        user: {
+          name: user.name,
+          email: user.email,
+          role: user.role
+        }
       }
     })
   } catch (error) {

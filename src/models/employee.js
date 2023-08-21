@@ -17,10 +17,6 @@ const employeeSchema = mongoose.Schema({
     type: 'number',
     required: true
   },
-  age: {
-    type: 'number',
-    required: true
-  },
   nationality: {
     type: 'string',
     required: true

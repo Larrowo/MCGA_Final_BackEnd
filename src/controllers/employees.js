@@ -17,6 +17,9 @@ const getEmployees = async (req, res) => {
   }
 }
 
+/**
+ * !THIS FUNCTION IS DEPRECATED
+ */
 // Get employee by id
 const getEmployeesById = async (req, res) => {
   try {
