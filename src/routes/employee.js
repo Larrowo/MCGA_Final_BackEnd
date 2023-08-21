@@ -7,7 +7,10 @@ const { tokenAuthenticator } = require('../middleWares/tokenAuthenticator')
 router.get('/employees', employeesController.getEmployees)
 
 // Listens to the GET method with the ´id´ parameter
-router.get('/id/:id', employeesController.getEmployeesById)
+/**
+ * !DEPRECATED ROUTE
+ * *router.get('/id/:id', employeesController.getEmployeesById)
+ */
 
 // Listens to the POST method
 router.post('/employees', tokenAuthenticator, employeesController.addEmployee)
