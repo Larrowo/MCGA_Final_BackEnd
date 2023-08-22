@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 4000
 
 app.use(
   cors({
-    origin: 'https://frontend.vercel.app'
+    origin: 'https://mcga-final-front-end-n353.vercel.app/'
   })
 )
 
