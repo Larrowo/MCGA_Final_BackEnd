@@ -14,7 +14,7 @@ const employeeSchema = mongoose.Schema({
     required: true
   },
   DNI: {
-    type: 'number',
+    type: 'string',
     required: true
   },
   nationality: {
